@@ -23,7 +23,7 @@ const MessageBox: React.FC<IMessageBoxProps> = ({ isLast, data }) => {
     .map((user) => user.name)
     .join(",");
   const container = clsx("flex gap-3 p-4 mb-4", isOwn && "justify-end");
-  const avatar = clsx(isOwn && "order-2 flex items-end");
+  const avatar = clsx("flex items-end", isOwn && "order-2");
   const body = clsx("flex flex-col gap-2 flex-1", isOwn && "items-end");
   const message = clsx(
     "text-sm w-fit overflow-hidden",
